@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.9.6 on darwin)" generated="20230914 00:49:15.407" rpa="false" schemaversion="3">
+<suite id="s1" name="Image Comparison" source="/Users/alvaro/Documents/hotglue/playwright/image_comparison.robot">
+<test id="s1-t1" name="Prueba Compare Images using" line="13">
+<kw name="CompareImagesExample">
+<arg>https://www.python.org/</arg>
+<arg>xpath = //img[@src='/static/img/python-logo.png']</arg>
+<doc>Comparando Imagenes</doc>
+<kw name="Compare Images" library="comparison">
+<var>${Result}</var>
+<arg>${link}</arg>
+<arg>${locator}</arg>
+<msg timestamp="20230914 00:49:20.837" level="INFO">0.032707606</msg>
+<msg timestamp="20230914 00:49:20.837" level="INFO">${Result} = 0.032707606</msg>
+<status status="PASS" starttime="20230914 00:49:16.470" endtime="20230914 00:49:20.837"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 00:49:20.837" endtime="20230914 00:49:20.837"/>
+</kw>
+<if>
+<branch type="IF" condition="$Result == 0.0">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>It's a perfect match! (0% Error)</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<status status="NOT RUN" starttime="20230914 00:49:20.840" endtime="20230914 00:49:20.840"/>
+</kw>
+<status status="NOT RUN" starttime="20230914 00:49:20.840" endtime="20230914 00:49:20.840"/>
+</branch>
+<branch type="ELSE IF" condition="$Result &lt; 0.04">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>It's not a perfect match, but close! (&lt;4% Error)</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230914 00:49:20.840" level="INFO">Execution passed with message:
+It's not a perfect match, but close! (&lt;4% Error)</msg>
+<status status="PASS" starttime="20230914 00:49:20.840" endtime="20230914 00:49:20.840"/>
+</kw>
+<status status="PASS" starttime="20230914 00:49:20.840" endtime="20230914 00:49:20.840"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>No good matches in the directory. (&gt;5% Error)</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20230914 00:49:20.840" endtime="20230914 00:49:20.840"/>
+</kw>
+<status status="NOT RUN" starttime="20230914 00:49:20.840" endtime="20230914 00:49:20.840"/>
+</branch>
+<status status="PASS" starttime="20230914 00:49:20.837" endtime="20230914 00:49:20.840"/>
+</if>
+<status status="PASS" starttime="20230914 00:49:16.470" endtime="20230914 00:49:20.840"/>
+</kw>
+<status status="PASS" starttime="20230914 00:49:16.469" endtime="20230914 00:49:20.840">It's not a perfect match, but close! (&lt;4% Error)</status>
+</test>
+<test id="s1-t2" name="Prueba Compare Images using" line="13">
+<kw name="CompareImagesExample">
+<arg>https://www.python.org/</arg>
+<arg>xpath = //*[@id="touchnav-wrapper"]/header/div/div[2]</arg>
+<doc>Comparando Imagenes</doc>
+<kw name="Compare Images" library="comparison">
+<var>${Result}</var>
+<arg>${link}</arg>
+<arg>${locator}</arg>
+<msg timestamp="20230914 00:49:25.321" level="INFO">0.037769303</msg>
+<msg timestamp="20230914 00:49:25.321" level="INFO">${Result} = 0.037769303</msg>
+<status status="PASS" starttime="20230914 00:49:20.841" endtime="20230914 00:49:25.321"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 00:49:25.321" endtime="20230914 00:49:25.321"/>
+</kw>
+<if>
+<branch type="IF" condition="$Result == 0.0">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>It's a perfect match! (0% Error)</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<status status="NOT RUN" starttime="20230914 00:49:25.322" endtime="20230914 00:49:25.322"/>
+</kw>
+<status status="NOT RUN" starttime="20230914 00:49:25.321" endtime="20230914 00:49:25.322"/>
+</branch>
+<branch type="ELSE IF" condition="$Result &lt; 0.04">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>It's not a perfect match, but close! (&lt;4% Error)</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230914 00:49:25.322" level="INFO">Execution passed with message:
+It's not a perfect match, but close! (&lt;4% Error)</msg>
+<status status="PASS" starttime="20230914 00:49:25.322" endtime="20230914 00:49:25.322"/>
+</kw>
+<status status="PASS" starttime="20230914 00:49:25.322" endtime="20230914 00:49:25.322"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>No good matches in the directory. (&gt;5% Error)</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20230914 00:49:25.322" endtime="20230914 00:49:25.322"/>
+</kw>
+<status status="NOT RUN" starttime="20230914 00:49:25.322" endtime="20230914 00:49:25.322"/>
+</branch>
+<status status="PASS" starttime="20230914 00:49:25.321" endtime="20230914 00:49:25.322"/>
+</if>
+<status status="PASS" starttime="20230914 00:49:20.841" endtime="20230914 00:49:25.322"/>
+</kw>
+<status status="PASS" starttime="20230914 00:49:20.840" endtime="20230914 00:49:25.322">It's not a perfect match, but close! (&lt;4% Error)</status>
+</test>
+<test id="s1-t3" name="Prueba Compare Images using" line="13">
+<kw name="CompareImagesExample">
+<arg>https://www.python.org/</arg>
+<arg>xpath = //*[@id="touchnav-wrapper"]/header/div</arg>
+<doc>Comparando Imagenes</doc>
+<kw name="Compare Images" library="comparison">
+<var>${Result}</var>
+<arg>${link}</arg>
+<arg>${locator}</arg>
+<msg timestamp="20230914 00:49:29.764" level="INFO">0.035217304</msg>
+<msg timestamp="20230914 00:49:29.765" level="INFO">${Result} = 0.035217304</msg>
+<status status="PASS" starttime="20230914 00:49:25.323" endtime="20230914 00:49:29.765"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 00:49:29.765" endtime="20230914 00:49:29.765"/>
+</kw>
+<if>
+<branch type="IF" condition="$Result == 0.0">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>It's a perfect match! (0% Error)</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<status status="NOT RUN" starttime="20230914 00:49:29.765" endtime="20230914 00:49:29.765"/>
+</kw>
+<status status="NOT RUN" starttime="20230914 00:49:29.765" endtime="20230914 00:49:29.765"/>
+</branch>
+<branch type="ELSE IF" condition="$Result &lt; 0.04">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>It's not a perfect match, but close! (&lt;4% Error)</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230914 00:49:29.766" level="INFO">Execution passed with message:
+It's not a perfect match, but close! (&lt;4% Error)</msg>
+<status status="PASS" starttime="20230914 00:49:29.766" endtime="20230914 00:49:29.766"/>
+</kw>
+<status status="PASS" starttime="20230914 00:49:29.766" endtime="20230914 00:49:29.766"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>No good matches in the directory. (&gt;5% Error)</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20230914 00:49:29.766" endtime="20230914 00:49:29.766"/>
+</kw>
+<status status="NOT RUN" starttime="20230914 00:49:29.766" endtime="20230914 00:49:29.766"/>
+</branch>
+<status status="PASS" starttime="20230914 00:49:29.765" endtime="20230914 00:49:29.766"/>
+</if>
+<status status="PASS" starttime="20230914 00:49:25.323" endtime="20230914 00:49:29.766"/>
+</kw>
+<status status="PASS" starttime="20230914 00:49:25.322" endtime="20230914 00:49:29.766">It's not a perfect match, but close! (&lt;4% Error)</status>
+</test>
+<test id="s1-t4" name="Prueba Compare Images using" line="13">
+<kw name="CompareImagesExample">
+<arg>https://www.python.org/</arg>
+<arg>xpath = //*[@id="mainnav"]</arg>
+<doc>Comparando Imagenes</doc>
+<kw name="Compare Images" library="comparison">
+<var>${Result}</var>
+<arg>${link}</arg>
+<arg>${locator}</arg>
+<msg timestamp="20230914 00:49:34.109" level="INFO">0.027776018</msg>
+<msg timestamp="20230914 00:49:34.109" level="INFO">${Result} = 0.027776018</msg>
+<status status="PASS" starttime="20230914 00:49:29.768" endtime="20230914 00:49:34.109"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 00:49:34.109" endtime="20230914 00:49:34.110"/>
+</kw>
+<if>
+<branch type="IF" condition="$Result == 0.0">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>It's a perfect match! (0% Error)</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<status status="NOT RUN" starttime="20230914 00:49:34.110" endtime="20230914 00:49:34.110"/>
+</kw>
+<status status="NOT RUN" starttime="20230914 00:49:34.110" endtime="20230914 00:49:34.110"/>
+</branch>
+<branch type="ELSE IF" condition="$Result &lt; 0.04">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>It's not a perfect match, but close! (&lt;4% Error)</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230914 00:49:34.110" level="INFO">Execution passed with message:
+It's not a perfect match, but close! (&lt;4% Error)</msg>
+<status status="PASS" starttime="20230914 00:49:34.110" endtime="20230914 00:49:34.110"/>
+</kw>
+<status status="PASS" starttime="20230914 00:49:34.110" endtime="20230914 00:49:34.110"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>No good matches in the directory. (&gt;5% Error)</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20230914 00:49:34.110" endtime="20230914 00:49:34.110"/>
+</kw>
+<status status="NOT RUN" starttime="20230914 00:49:34.110" endtime="20230914 00:49:34.110"/>
+</branch>
+<status status="PASS" starttime="20230914 00:49:34.110" endtime="20230914 00:49:34.110"/>
+</if>
+<status status="PASS" starttime="20230914 00:49:29.767" endtime="20230914 00:49:34.110"/>
+</kw>
+<status status="PASS" starttime="20230914 00:49:29.766" endtime="20230914 00:49:34.110">It's not a perfect match, but close! (&lt;4% Error)</status>
+</test>
+<test id="s1-t5" name="Prueba Compare Images using" line="13">
+<kw name="CompareImagesExample">
+<arg>https://www.python.org/</arg>
+<arg>xpath = /html</arg>
+<doc>Comparando Imagenes</doc>
+<kw name="Compare Images" library="comparison">
+<var>${Result}</var>
+<arg>${link}</arg>
+<arg>${locator}</arg>
+<msg timestamp="20230914 00:49:38.989" level="INFO">8.4661515e-06</msg>
+<msg timestamp="20230914 00:49:38.989" level="INFO">${Result} = 8.4661515e-06</msg>
+<status status="PASS" starttime="20230914 00:49:34.112" endtime="20230914 00:49:38.989"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 00:49:38.990" endtime="20230914 00:49:38.990"/>
+</kw>
+<if>
+<branch type="IF" condition="$Result == 0.0">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>It's a perfect match! (0% Error)</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<status status="NOT RUN" starttime="20230914 00:49:38.991" endtime="20230914 00:49:38.991"/>
+</kw>
+<status status="NOT RUN" starttime="20230914 00:49:38.990" endtime="20230914 00:49:38.991"/>
+</branch>
+<branch type="ELSE IF" condition="$Result &lt; 0.04">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>It's not a perfect match, but close! (&lt;4% Error)</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230914 00:49:38.991" level="INFO">Execution passed with message:
+It's not a perfect match, but close! (&lt;4% Error)</msg>
+<status status="PASS" starttime="20230914 00:49:38.991" endtime="20230914 00:49:38.991"/>
+</kw>
+<status status="PASS" starttime="20230914 00:49:38.991" endtime="20230914 00:49:38.991"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>No good matches in the directory. (&gt;5% Error)</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20230914 00:49:38.991" endtime="20230914 00:49:38.991"/>
+</kw>
+<status status="NOT RUN" starttime="20230914 00:49:38.991" endtime="20230914 00:49:38.991"/>
+</branch>
+<status status="PASS" starttime="20230914 00:49:38.990" endtime="20230914 00:49:38.991"/>
+</if>
+<status status="PASS" starttime="20230914 00:49:34.112" endtime="20230914 00:49:38.992"/>
+</kw>
+<status status="PASS" starttime="20230914 00:49:34.111" endtime="20230914 00:49:38.992">It's not a perfect match, but close! (&lt;4% Error)</status>
+</test>
+<test id="s1-t6" name="Prueba Compare Images using" line="13">
+<kw name="CompareImagesExample">
+<arg>https://www.python.org/</arg>
+<arg>xpath = //*[@id="content"]/div/section/div[5]</arg>
+<doc>Comparando Imagenes</doc>
+<kw name="Compare Images" library="comparison">
+<var>${Result}</var>
+<arg>${link}</arg>
+<arg>${locator}</arg>
+<msg timestamp="20230914 00:49:43.400" level="INFO">0.03097552</msg>
+<msg timestamp="20230914 00:49:43.400" level="INFO">${Result} = 0.03097552</msg>
+<status status="PASS" starttime="20230914 00:49:38.993" endtime="20230914 00:49:43.400"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 00:49:43.400" endtime="20230914 00:49:43.401"/>
+</kw>
+<if>
+<branch type="IF" condition="$Result == 0.0">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>It's a perfect match! (0% Error)</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<status status="NOT RUN" starttime="20230914 00:49:43.401" endtime="20230914 00:49:43.401"/>
+</kw>
+<status status="NOT RUN" starttime="20230914 00:49:43.401" endtime="20230914 00:49:43.401"/>
+</branch>
+<branch type="ELSE IF" condition="$Result &lt; 0.04">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>It's not a perfect match, but close! (&lt;4% Error)</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230914 00:49:43.401" level="INFO">Execution passed with message:
+It's not a perfect match, but close! (&lt;4% Error)</msg>
+<status status="PASS" starttime="20230914 00:49:43.401" endtime="20230914 00:49:43.401"/>
+</kw>
+<status status="PASS" starttime="20230914 00:49:43.401" endtime="20230914 00:49:43.401"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>No good matches in the directory. (&gt;5% Error)</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20230914 00:49:43.401" endtime="20230914 00:49:43.401"/>
+</kw>
+<status status="NOT RUN" starttime="20230914 00:49:43.401" endtime="20230914 00:49:43.401"/>
+</branch>
+<status status="PASS" starttime="20230914 00:49:43.401" endtime="20230914 00:49:43.401"/>
+</if>
+<status status="PASS" starttime="20230914 00:49:38.993" endtime="20230914 00:49:43.402"/>
+</kw>
+<status status="PASS" starttime="20230914 00:49:38.992" endtime="20230914 00:49:43.402">It's not a perfect match, but close! (&lt;4% Error)</status>
+</test>
+<doc>Practica Compare Images</doc>
+<status status="PASS" starttime="20230914 00:49:15.408" endtime="20230914 00:49:43.402"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Image Comparison">Image Comparison</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230914 00:49:20.840" level="WARN">Multiple tests with name 'Prueba Compare Images using' executed in suite 'Image Comparison'.</msg>
+<msg timestamp="20230914 00:49:25.322" level="WARN">Multiple tests with name 'Prueba Compare Images using' executed in suite 'Image Comparison'.</msg>
+<msg timestamp="20230914 00:49:29.766" level="WARN">Multiple tests with name 'Prueba Compare Images using' executed in suite 'Image Comparison'.</msg>
+<msg timestamp="20230914 00:49:34.111" level="WARN">Multiple tests with name 'Prueba Compare Images using' executed in suite 'Image Comparison'.</msg>
+<msg timestamp="20230914 00:49:38.992" level="WARN">Multiple tests with name 'Prueba Compare Images using' executed in suite 'Image Comparison'.</msg>
+</errors>
+</robot>
